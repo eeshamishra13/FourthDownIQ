@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FourthDownIQ — AI Fourth Down Decision Engine</title>
+
+    <meta
+        name="description"
+        content="FourthDownIQ uses machine learning to analyze fourth-down football situations and recommend the optimal decision."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cursor-glow"></div>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-inner">
+
+        <a href="#top" class="brand">
+            <span class="brand-mark">4D</span>
+
+            <span class="brand-text">
+                FourthDown<span>IQ</span>
+            </span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#analyzer">Analyzer</a>
+            <a href="#simulator">Simulator</a>
+            <a href="#insights">Insights</a>
+            <a href="#performance">Model</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                class="icon-button"
+                id="themeToggle"
+                aria-label="Toggle theme"
+                title="Toggle theme"
+            >
+                <span class="theme-icon">◐</span>
+            </button>
+
+            <a href="#analyzer" class="nav-button">
+                Analyze Situation
+            </a>
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#analyzer">Analyzer</a>
+        <a href="#simulator">Simulator</a>
+        <a href="#insights">Insights</a>
+        <a href="#performance">Model</a>
+    </div>
+
+</header>
+
+
+<main id="top">
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero section">
+
+    <div class="hero-grid">
+
+        <div class="hero-copy reveal">
+
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                AI-POWERED FOURTH DOWN ANALYTICS
+            </div>
+
+            <h1>
+                Make the
+                <span>fourth down</span>
+                decision.
+            </h1>
+
+            <p class="hero-description">
+                FourthDownIQ transforms game context into an
+                explainable, data-driven decision using machine
+                learning trained on NFL play-by-play situations.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#analyzer" class="primary-button">
+                    Analyze a Situation
+                    <span>→</span>
+                </a>
+
+                <a href="#simulator" class="secondary-button">
+                    Explore Simulator
+                </a>
+
+            </div>
+
+            <div class="hero-meta">
+                <span>ML DECISION ENGINE</span>
+                <span>•</span>
+                <span>EXPLAINABLE OUTPUT</span>
+                <span>•</span>
+                <span>WHAT-IF ANALYSIS</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+            <div class="hero-card">
+
+                <div class="hero-card-top">
+                    <span>LIVE DECISION ENGINE</span>
+                    <span class="live-label">
+                        <i></i> READY
+                    </span>
+                </div>
+
+                <div class="hero-situation">
+
+                    <div>
+                        <span>DOWN</span>
+                        <strong>4TH</strong>
+                    </div>
+
+                    <div>
+                        <span>TO GO</span>
+                        <strong>2 YDS</strong>
+                    </div>
+
+                    <div>
+                        <span>FIELD</span>
+                        <strong>45</strong>
+                    </div>
+
+                    <div>
+                        <span>TIME</span>
+                        <strong>07:00</strong>
+                    </div>
+
+                </div>
+
+                <div class="hero-decision">
+
+                    <div>
+                        <span class="small-label">
+                            RECOMMENDED DECISION
+                        </span>
+
+                        <strong>GO FOR IT</strong>
+                    </div>
+
+                    <div class="hero-confidence">
+                        <span>CONFIDENCE</span>
+                        <strong>78%</strong>
+                    </div>
+
+                </div>
+
+                <div class="mini-bars">
+
+                    <div>
+                        <span>PUNT</span>
+                        <div class="mini-track">
+                            <i style="width:12%"></i>
+                        </div>
+                        <b>12%</b>
+                    </div>
+
+                    <div>
+                        <span>FIELD GOAL</span>
+                        <div class="mini-track">
+                            <i style="width:21%"></i>
+                        </div>
+                        <b>21%</b>
+                    </div>
+
+                    <div>
+                        <span>GO</span>
+                        <div class="mini-track">
+                            <i style="width:78%"></i>
+                        </div>
+                        <b>78%</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANALYZER
+========================================================= -->
+
+<section class="feature-section section" id="analyzer">
+
+    <div class="section-heading reveal">
+
+        <div class="section-kicker">
+            01 / ANALYZER
+        </div>
+
+        <h2>
+            Turn a game situation
+            <span>into a decision.</span>
+        </h2>
+
+        <p>
+            Enter the current game context and let the ML decision
+            engine evaluate the situation.
+        </p>
+
+    </div>
+
+
+    <div class="analyzer-layout">
+
+        <!-- INPUT PANEL -->
+
+        <div class="panel analyzer-panel reveal">
+
+            <div class="panel-header">
+
+                <div>
+                    <span class="panel-index">INPUT</span>
+                    <h3>Game Situation</h3>
+                </div>
+
+                <span class="panel-status">LIVE MODEL</span>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label for="ydstogo">
+                        Yards To Go
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ydstogo"
+                        min="1"
+                        max="99"
+                        placeholder="4"
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="yardline">
+                        Yard Line
+                    </label>
+
+                    <input
+                        type="number"
+                        id="yardline"
+                        min="1"
+                        max="99"
+                        placeholder="45"
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="scoreDifferential">
+                        Score Differential
+                    </label>
+
+                    <input
+                        type="number"
+                        id="scoreDifferential"
+                        min="-50"
+                        max="50"
+                        placeholder="-3"
+                    >
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="gameTime">
+                        Time Remaining
+                    </label>
+
+                    <div class="time-input-wrapper">
+
+                        <input
+                            type="number"
+                            id="gameTime"
+                            min="0"
+                            max="3600"
+                            placeholder="300"
+                        >
+
+                        <span id="gameTimeDisplay">
+                            05:00
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+                    <label for="distanceGroup">
+                        Distance Group
+                    </label>
+
+                    <select id="distanceGroup">
+                        <option value="">Select distance</option>
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="fieldZone">
+                        Field Zone
+                    </label>
+
+                    <select id="fieldZone">
+                        <option value="">Select zone</option>
+                        <option value="own">Own Territory</option>
+                        <option value="midfield">Midfield</option>
+                        <option value="opponent">Opponent Territory</option>
+                        <option value="red_zone">Red Zone</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="scoreState">
+                        Score State
+                    </label>
+
+                    <select id="scoreState">
+                        <option value="">Select state</option>
+                        <option value="winning">Winning</option>
+                        <option value="tied">Tied</option>
+                        <option value="losing">Losing</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="timeState">
+                        Game State
+                    </label>
+
+                    <select id="timeState">
+                        <option value="">Select state</option>
+                        <option value="normal">Normal</option>
+                        <option value="late">Late Game</option>
+                        <option value="critical">Critical</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="analyzer-controls">
+
+                <button
+                    class="primary-button analyze-button"
+                    id="analyzeButton"
+                >
+                    Analyze Situation
+                    <span>→</span>
+                </button>
+
+                <button
+                    class="ghost-button"
+                    id="resetButton"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+            <div class="analysis-footer">
+
+                <span id="analysisStatus">
+                    Ready for analysis
+                </span>
+
+                <span>
+                    Ctrl/Cmd + Enter to analyze
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT PANEL -->
+
+        <div
+            class="panel result-panel reveal"
+            id="resultCard"
+        >
+
+            <div class="result-top">
+
+                <div>
+                    <span class="panel-index">
+                        MODEL OUTPUT
+                    </span>
+
+                    <h3>Decision</h3>
+                </div>
+
+                <span id="resultStatus" class="result-status">
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="recommendation-block">
+
+                <span class="small-label">
+                    RECOMMENDATION
+                </span>
+
+                <strong id="recommendation">
+                    —
+                </strong>
+
+                <div class="confidence-row">
+
+                    <span>
+                        Model confidence
+                    </span>
+
+                    <b id="confidence">
+                        —
+                    </b>
+
+                </div>
+
+            </div>
+
+
+            <div class="probability-section">
+
+                <div class="probability-heading">
+                    <span>DECISION PROBABILITIES</span>
+                    <span>MODEL DISTRIBUTION</span>
+                </div>
+
+
+                <div class="probability-row">
+
+                    <div class="probability-label">
+                        <span>PUNT</span>
+                        <b id="puntProbability">—</b>
+                    </div>
+
+                    <div class="probability-track">
+                        <i id="puntBar"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="probability-row">
+
+                    <div class="probability-label">
+                        <span>FIELD GOAL</span>
+                        <b id="fieldGoalProbability">—</b>
+                    </div>
+
+                    <div class="probability-track">
+                        <i id="fieldGoalBar"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="probability-row">
+
+                    <div class="probability-label">
+                        <span>GO FOR IT</span>
+                        <b id="goProbability">—</b>
+                    </div>
+
+                    <div class="probability-track">
+                        <i id="goBar"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="explanation-section">
+
+                <div class="subheading">
+                    WHY THIS DECISION?
+                </div>
+
+                <div id="explanationList">
+                    <p>
+                        Enter a game situation and run the
+                        analysis to see the model reasoning.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCENARIO SIMULATOR
+========================================================= -->
+
+<section
+    class="feature-section section simulator-section"
+    id="simulator"
+>
+
+    <div class="section-heading reveal">
+
+        <div class="section-kicker">
+            02 / WHAT-IF SIMULATOR
+        </div>
+
+        <h2>
+            Change the situation.
+            <span>Challenge the decision.</span>
+        </h2>
+
+        <p>
+            Explore how changing game context changes the model's
+            recommended decision.
+        </p>
+
+    </div>
+
+
+    <div class="simulator-layout">
+
+        <div class="panel simulator-controls reveal">
+
+            <div class="panel-header">
+
+                <div>
+                    <span class="panel-index">SCENARIO LAB</span>
+                    <h3>What if?</h3>
+                </div>
+
+                <span class="panel-status">
+                    INTERACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="preset-heading">
+                QUICK SCENARIOS
+            </div>
+
+
+            <div class="preset-grid">
+
+                <button
+                    class="scenario-button"
+                    data-scenario="shortYardage"
+                >
+                    <span>4TH & 2</span>
+                    <small>Short yardage</small>
+                </button>
+
+                <button
+                    class="scenario-button"
+                    data-scenario="fourthAndLong"
+                >
+                    <span>4TH & 8</span>
+                    <small>Long conversion</small>
+                </button>
+
+                <button
+                    class="scenario-button"
+                    data-scenario="fieldGoalRange"
+                >
+                    <span>FIELD GOAL</span>
+                    <small>Scoring range</small>
+                </button>
+
+                <button
+                    class="scenario-button"
+                    data-scenario="twoMinuteDrill"
+                >
+                    <span>2 MIN DRILL</span>
+                    <small>Critical clock</small>
+                </button>
+
+                <button
+                    class="scenario-button"
+                    data-scenario="goalLine"
+                >
+                    <span>GOAL LINE</span>
+                    <small>Short field</small>
+                </button>
+
+            </div>
+
+
+            <div class="simulator-divider"></div>
+
+
+            <div class="slider-group">
+
+                <div class="slider-label">
+                    <span>Yards To Go</span>
+                    <strong id="simYdsValue">4</strong>
+                </div>
+
+                <input
+                    type="range"
+                    id="simYds"
+                    min="1"
+                    max="15"
+                    value="4"
+                >
+
+            </div>
+
+
+            <div class="slider-group">
+
+                <div class="slider-label">
+                    <span>Yard Line</span>
+                    <strong id="simYardlineValue">45</strong>
+                </div>
+
+                <input
+                    type="range"
+                    id="simYardline"
+                    min="1"
+                    max="99"
+                    value="45"
+                >
+
+            </div>
+
+
+            <div class="slider-group">
+
+                <div class="slider-label">
+                    <span>Score Differential</span>
+                    <strong id="simScoreValue">0</strong>
+                </div>
+
+                <input
+                    type="range"
+                    id="simScore"
+                    min="-21"
+                    max="21"
+                    value="0"
+                >
+
+            </div>
+
+
+            <div class="slider-group">
+
+                <div class="slider-label">
+                    <span>Time Remaining</span>
+                    <strong id="simTimeValue">05:00</strong>
+                </div>
+
+                <input
+                    type="range"
+                    id="simTime"
+                    min="0"
+                    max="3600"
+                    value="300"
+                >
+
+            </div>
+
+
+            <div class="simulator-selects">
+
+                <select id="simDistance">
+                    <option value="short">Short Distance</option>
+                    <option value="medium" selected>Medium Distance</option>
+                    <option value="long">Long Distance</option>
+                </select>
+
+                <select id="simField">
+                    <option value="own">Own Territory</option>
+                    <option value="midfield" selected>Midfield</option>
+                    <option value="opponent">Opponent Territory</option>
+                    <option value="red_zone">Red Zone</option>
+                </select>
+
+            </div>
+
+
+            <button
+                class="primary-button full-button"
+                id="runSimulation"
+            >
+                Run What-If Simulation
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+        <div class="panel simulation-result reveal">
+
+            <div class="simulation-result-header">
+
+                <div>
+                    <span class="panel-index">
+                        SIMULATION OUTPUT
+                    </span>
+
+                    <h3 id="simulationDecision">
+                        Waiting
+                    </h3>
+                </div>
+
+                <div class="simulation-confidence">
+                    <span>CONFIDENCE</span>
+                    <strong id="simulationConfidence">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="decision-compare">
+
+                <div class="decision-card" data-decision="GO">
+
+                    <div class="decision-card-top">
+                        <span>GO</span>
+                        <strong id="simGo">—</strong>
+                    </div>
+
+                    <div class="decision-card-bar">
+                        <i id="simGoBar"></i>
+                    </div>
+
+                    <small>
+                        Aggressive conversion attempt
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="decision-card"
+                    data-decision="FIELD_GOAL"
+                >
+
+                    <div class="decision-card-top">
+                        <span>FIELD GOAL</span>
+                        <strong id="simFg">—</strong>
+                    </div>
+
+                    <div class="decision-card-bar">
+                        <i id="simFgBar"></i>
+                    </div>
+
+                    <small>
+                        Take the available points
+                    </small>
+
+                </div>
+
+
+                <div class="decision-card" data-decision="PUNT">
+
+                    <div class="decision-card-top">
+                        <span>PUNT</span>
+                        <strong id="simPunt">—</strong>
+                    </div>
+
+                    <div class="decision-card-bar">
+                        <i id="simPuntBar"></i>
+                    </div>
+
+                    <small>
+                        Flip field position
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="simulation-callout">
+
+                <span class="callout-line"></span>
+
+                <div>
+                    <span>MODEL SIGNAL</span>
+
+                    <p id="simulationExplanation">
+                        Run a simulation to see how the
+                        decision changes.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INSIGHTS
+========================================================= -->
+
+<section
+    class="feature-section section"
+    id="insights"
+>
+
+    <div class="section-heading reveal">
+
+        <div class="section-kicker">
+            03 / EXPLAINABLE AI
+        </div>
+
+        <h2>
+            Don't just get an answer.
+            <span>Understand why.</span>
+        </h2>
+
+        <p>
+            FourthDownIQ surfaces the game factors influencing
+            the model's recommendation.
+        </p>
+
+    </div>
+
+
+    <div class="insights-layout">
+
+        <div class="panel insight-summary reveal">
+
+            <span class="panel-index">
+                STRATEGIC SIGNAL
+            </span>
+
+            <div class="big-confidence">
+                <strong id="insightConfidence">
+                    0.00
+                </strong>
+
+                <span>
+                    MODEL<br>
+                    CONFIDENCE
+                </span>
+            </div>
+
+            <p id="insightSummary">
+                Run an analysis to see the model's
+                strategic signal.
+            </p>
+
+        </div>
+
+
+        <div class="panel factors-panel reveal">
+
+            <div class="panel-header">
+
+                <div>
+                    <span class="panel-index">
+                        MODEL FACTORS
+                    </span>
+
+                    <h3>Decision Drivers</h3>
+                </div>
+
+            </div>
+
+
+            <div
+                class="factor-list"
+                id="modelFactorsList"
+            >
+                <p>
+                    Model factors will appear after analysis.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="panel explanation-panel reveal">
+
+            <div class="panel-header">
+
+                <div>
+                    <span class="panel-index">
+                        REASONING
+                    </span>
+
+                    <h3>Human Explanation</h3>
+                </div>
+
+            </div>
+
+
+            <div id="insightExplanation">
+                <p>
+                    The model explanation will appear here
+                    after an analysis.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="factor-grid">
+
+        <div class="factor-card reveal">
+            <span>01</span>
+            <strong id="insightFactor1Name">—</strong>
+            <b id="insightFactor1Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor1Bar"></i>
+            </div>
+        </div>
+
+        <div class="factor-card reveal">
+            <span>02</span>
+            <strong id="insightFactor2Name">—</strong>
+            <b id="insightFactor2Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor2Bar"></i>
+            </div>
+        </div>
+
+        <div class="factor-card reveal">
+            <span>03</span>
+            <strong id="insightFactor3Name">—</strong>
+            <b id="insightFactor3Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor3Bar"></i>
+            </div>
+        </div>
+
+        <div class="factor-card reveal">
+            <span>04</span>
+            <strong id="insightFactor4Name">—</strong>
+            <b id="insightFactor4Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor4Bar"></i>
+            </div>
+        </div>
+
+        <div class="factor-card reveal">
+            <span>05</span>
+            <strong id="insightFactor5Name">—</strong>
+            <b id="insightFactor5Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor5Bar"></i>
+            </div>
+        </div>
+
+        <div class="factor-card reveal">
+            <span>06</span>
+            <strong id="insightFactor6Name">—</strong>
+            <b id="insightFactor6Value">—</b>
+            <div class="factor-bar">
+                <i id="insightFactor6Bar"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANALYSIS HISTORY
+========================================================= -->
+
+<section class="feature-section section" id="history">
+
+    <div class="section-heading reveal">
+
+        <div class="section-kicker">
+            04 / ANALYSIS HISTORY
+        </div>
+
+        <h2>
+            Keep track of
+            <span>your decisions.</span>
+        </h2>
+
+        <p>
+            Recent analyses are stored locally in your browser
+            so you can revisit decisions during a demo.
+        </p>
+
+    </div>
+
+
+    <div class="panel history-panel reveal">
+
+        <div class="history-header">
+
+            <div>
+                <span class="panel-index">
+                    LOCAL SESSION
+                </span>
+
+                <h3>Recent Analysis</h3>
+            </div>
+
+            <button
+                class="ghost-button"
+                id="clearHistory"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div id="historyList" class="history-list">
+
+            <div class="empty-history">
+                <span>NO ANALYSES YET</span>
+                <p>
+                    Your completed predictions will appear here.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MODEL PERFORMANCE
+========================================================= -->
+
+<section
+    class="feature-section section performance-section"
+    id="performance"
+>
+
+    <div class="section-heading reveal">
+
+        <div class="section-kicker">
+            05 / MODEL
+        </div>
+
+        <h2>
+            Built for decisions.
+            <span>Backed by data.</span>
+        </h2>
+
+        <p>
+            FourthDownIQ uses contextual game features to estimate
+            the most suitable fourth-down decision.
+        </p>
+
+    </div>
+
+
+    <div class="metrics-grid">
+
+        <div class="metric-card reveal">
+            <span>TRAINING SAMPLES</span>
+            <strong>3,997</strong>
+            <p>
+                Play-level situations in the current training dataset.
+            </p>
+        </div>
+
+        <div class="metric-card reveal">
+            <span>INPUT FEATURES</span>
+            <strong>8</strong>
+            <p>
+                Game context variables passed to the decision engine.
+            </p>
+        </div>
+
+        <div class="metric-card reveal">
+            <span>DECISION CLASSES</span>
+            <strong>3</strong>
+            <p>
+                Punt, field goal, and go-for-it outcomes.
+            </p>
+        </div>
+
+        <div class="metric-card reveal">
+            <span>OUTPUT</span>
+            <strong>EXPLAINABLE</strong>
+            <p>
+                Probabilities, confidence, and model factors.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="architecture panel reveal">
+
+        <div class="architecture-step">
+            <span>01</span>
+            <strong>GAME CONTEXT</strong>
+            <small>
+                Down, distance, field position, score and clock
+            </small>
+        </div>
+
+        <div class="architecture-arrow">→</div>
+
+        <div class="architecture-step">
+            <span>02</span>
+            <strong>ML ENGINE</strong>
+            <small>
+                Classification model evaluates the situation
+            </small>
+        </div>
+
+        <div class="architecture-arrow">→</div>
+
+        <div class="architecture-step">
+            <span>03</span>
+            <strong>DECISION</strong>
+            <small>
+                Recommended action and probability distribution
+            </small>
+        </div>
+
+        <div class="architecture-arrow">→</div>
+
+        <div class="architecture-step">
+            <span>04</span>
+            <strong>EXPLANATION</strong>
+            <small>
+                Human-readable strategic reasoning
+            </small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <a href="#top" class="brand">
+                <span class="brand-mark">4D</span>
+
+                <span class="brand-text">
+                    FourthDown<span>IQ</span>
+                </span>
+            </a>
+
+            <p>
+                AI-powered fourth-down decision intelligence.
+            </p>
+
+        </div>
+
+
+        <div class="footer-meta">
+
+            <span>
+                MACHINE LEARNING
+            </span>
+
+            <span>
+                EXPLAINABLE AI
+            </span>
+
+            <span>
+                SPORTS ANALYTICS
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>FourthDownIQ</span>
+        <span>Built for intelligent decisions.</span>
+    </div>
+
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
